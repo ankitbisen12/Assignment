@@ -1,0 +1,165 @@
+/* Existing CSS */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #007bff;
+}
+
+.title {
+  text-align: center;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 30px;
+  max-width: 500px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: "Playpen Sans", cursive;
+}
+
+.name {
+  display: flex;
+  flex-direction: row;
+}
+
+.first-name,
+.last-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.lst {
+  margin-left: 10px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="tel"] {
+  width: 90%;
+  padding: 8px 10px;
+  margin: 5px 0;
+  border: 1px solid rgb(46, 46, 46);
+  outline: none;
+}
+
+select {
+  width: 95%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid rgb(46, 46, 46);
+}
+
+.checkbox {
+  margin: 5px 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.checkbox label {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.checkbox input[type="checkbox"] {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.inner_checkbox {
+  display: flex;
+  flex-direction: row;
+  margin-left: 5px;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+}
+
+button {
+  display: block;
+  margin: 10px 0px;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.second_btn {
+  margin-left: 10px;
+}
+
+/* modal styling */
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 50%;
+  background-color: white;
+  padding: 3rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 130vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  font-size: 3rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.modal_title {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+
+@media (max-width: 420px) {
+  .modal {
+    height: 60%;
+  }
+}
+
+/* @media (max-width: 768px) {
+  .name {
+    flex-direction: column;
+  }
+
+  .first-name,
+  .last-name {
+    width: 100%;
+  }
+} */

@@ -1,0 +1,95 @@
+<!-- Que: Create a survey form with Fields; First Name, Last Name, Date of Birth, Country (dropdown), 
+Gender (checkbox), Profession, email, and mobile number. All the input fields are 
+necessary to submit the form. Create two buttons Submit and Reset. Reset will reset the 
+form while clicking on submit, first, it will check all the fields and necessary validations and 
+then a popup will appear displaying all the selected values with the label in front of it. On 
+closing the popup, the form should reset all the values. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Survey Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="title">Customer survey form</h1>
+    <div class="container">
+      <form id="customerForm">
+        <div class="name">
+          <div class="first-name">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" />
+          </div>
+          <div class="last-name lst">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" />
+          </div>
+        </div>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" />
+
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dateOfBirth" />
+
+        <label for="country">Country</label>
+        <select id="country" class="country">
+          <option value="">Select a country</option>
+          <option value="India">India</option>
+          <option value="Usa">Usa</option>
+          <option value="Uk">Uk</option>
+          <option value="Australia">Australia</option>
+          <option value="CA">Canada</option>
+        </select>
+
+        <label>Gender</label>
+        <div class="checkbox">
+          <div class="inner_checkbox">
+            <input type="radio" id="male" name="gender" value="Male" />
+            <label for="male">Male</label>
+          </div>
+          <div class="inner_checkbox">
+            <input type="radio" id="female" name="gender" value="Female" />
+            <label for="female">Female</label>
+          </div>
+          <div class="inner_checkbox">
+            <input type="radio" id="other" name="gender" value="Other" />
+            <label for="other">Other</label>
+          </div>
+        </div>
+
+        <label for="profession">Profession:</label>
+        <input type="text" id="profession" />
+
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel" id="mobile" />
+
+        <div class="btn">
+          <button type="submit" id="submitBtn">Submit</button>
+          <button type="button" id="resetBtn" class="second_btn">Reset</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <h1 class="modal_title">Survey form details</h1>
+      <ul id="details"></ul>
+    </div>
+    <div class="overlay hidden"></div>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
